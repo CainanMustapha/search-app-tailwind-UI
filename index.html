@@ -13,10 +13,10 @@ body {
 }
 
 .mt-44{
-margin-top: calc(50vh - 24px - 200px)
+margin-top: calc(50vh - 24px - 240px)
 }
 .mt-28{
-margin-top: calc(50vh - 24px - 200px)
+margin-top: calc(50vh - 24px - 240px)
 }
 
 /* custom palette */
@@ -32,35 +32,58 @@ background-color: #62A6AC;
 
 nav .menu-resposive{background: #fff}
   </style>
-  <style>
+   <style>
     @import url('https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css');
   </style>
-  <style>
-    
+  <style>  
   body {
     font-family: 'Poppins', sans-serif;
   }
 
 .mt-44{
-  margin-top: calc(50vh - 24px - 200px)
+  margin-top: calc(50vh - 24px - 270px) !important
 }
 .mt-28{
-  margin-top: calc(50vh - 24px - 200px)
+  margin-top: calc(50vh - 24px - 270px) !important
 }
 
 /* custom palette */
 
-.bg-yellow-500{
-  background-color: #6FA865;
+.bg-grayson-400{
+  background-color: #dcdedd;
 }
-.bg-yellow-600{
-  background-color: #62A6AC;
+.bg-grayson-500{
+  background-color: #c2c2c2;
+}
+.bg-grayson-600{
+  background-color: #5b5b5d;
 }
 
-.text-yellow-500{color: #6FA865;}
+.bg-emerald-400{
+  background-color: #c2e5d6;
+}
+.bg-emerald-500{
+  background-color: #4bc04b;
+}
+.bg-emerald-600{
+  background-color:#2a792a;
+}
+
+.bg-aqua-400{
+  background-color: #e4f1f2;
+}
+.bg-aqua-500{
+  background-color: #49929a;
+}
+.bg-Aqua-600{
+  background-color:#34696f;
+}
+
+
 
 nav .menu-resposive{background: #fff}
   </style>
+
 
 
 </head>
@@ -125,11 +148,10 @@ nav .menu-resposive{background: #fff}
   <!--  Content -->
  
   <div class="py-8 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-16 xl:px-24content container flex flex-col justify-center mt-28 items-center text-gray-600">
+    
     <img src="./assets/find-health-services-original-upscaled-222px.png" alt="" style="clip-path: circle(50% at 50% 50%);">
-    <div class="search rounded-full border w-2/5 flex p-2 mt-5 ">
-      <div class="">
-        .
-      </div>
+    <div class="search rounded-full border border-gray-300 w-2/5 flex p-2 mt-5 ">
+      
        <input id="search-bar" placeholder="Enter your keyword here" name="q"
       class="px-6 py-2 w-full h-8 rounded-md flex-1 outline-none bg-white" required="">
       <div class="">
@@ -140,12 +162,12 @@ nav .menu-resposive{background: #fff}
     </div>
 
     <div class="flex mt-10 text-sm gap-x-3">
-  <button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-yellow-500 whitespace-nowrap hover:bg-yellow-600 hover:text-white
+  <button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-emerald-500 whitespace-nowrap hover:bg-emerald-600 hover:text-white
     rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-500 focus:outline-none">
      Search in the UK
     </button>
   
-    <button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-yellow-500 whitespace-nowrap hover:bg-yellow-600 hover:text-white
+    <button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-emerald-500 whitespace-nowrap hover:bg-emerald-600 hover:text-white
     rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-500 focus:outline-none">
      Search in your area
     </button>
@@ -176,63 +198,94 @@ nav .menu-resposive{background: #fff}
   <!-- end Footer -->
   
 </body>
+<!-- <script src="https://cdn.tailwindcss.com"></script> -->
 
+<!-- custom color palettes -->
+<script>
+  // tailwind.config.js
+/*
+const colors = require('tailwindcss/colors')
+
+module.exports = {
+theme: {
+  colors: {
+      primary: '#red',
+      secondary: '#blue',
+      // ...
+    },
+  extend: {
+    colors: {
+      // you can either spread `colors` to apply all the colors
+      ...colors,
+      // or add them one by one and name whatever you want
+      amber: colors.amber,
+      lime: colors.lime,
+      emerald: colors.emerald,
+      cyan: colors.cyan,
+      
+    }
+  }
+}
+}*/
+</script>
+
+<!-- menu controllers -->
 <script>   
-    var searchMenuDiv = document.getElementById("search-content");
-        var searchMenu = document.getElementById("search-toggle");
+  var searchMenuDiv = document.getElementById("search-content");
+      var searchMenu = document.getElementById("search-toggle");
 
-        var navMenuDiv = document.getElementById("nav-content");
-        var navMenu = document.getElementById("nav-toggle");
+      var navMenuDiv = document.getElementById("nav-content");
+      var navMenu = document.getElementById("nav-toggle");
 
-        document.onclick = check;
+      document.onclick = check;
 
-        function check(e) {
-            var target = (e && e.target) || (event && event.srcElement);
+      function check(e) {
+          var target = (e && e.target) || (event && event.srcElement);
 
-            //User Menu
-            if (!checkParent(target, searchMenuDiv)) {
-                // click NOT on the menu
-                if (checkParent(target, searchMenu)) {
-                    // click on the link
-                    if (searchMenuDiv.classList.contains("hidden")) {
-                        searchMenuDiv.classList.remove("hidden");
-                        searchfield.focus();
-                    } else {
-                        searchMenuDiv.classList.add("hidden");
-                    }
-                } else {
-                    // click both outside link and outside menu, hide menu
-                    searchMenuDiv.classList.add("hidden");
-                }
-            }
+          //User Menu
+          if (!checkParent(target, searchMenuDiv)) {
+              // click NOT on the menu
+              if (checkParent(target, searchMenu)) {
+                  // click on the link
+                  if (searchMenuDiv.classList.contains("hidden")) {
+                      searchMenuDiv.classList.remove("hidden");
+                      searchfield.focus();
+                  } else {
+                      searchMenuDiv.classList.add("hidden");
+                  }
+              } else {
+                  // click both outside link and outside menu, hide menu
+                  searchMenuDiv.classList.add("hidden");
+              }
+          }
 
-            //Nav Menu
-            if (!checkParent(target, navMenuDiv)) {
-                // click NOT on the menu
-                if (checkParent(target, navMenu)) {
-                    // click on the link
-                    if (navMenuDiv.classList.contains("hidden")) {
-                        navMenuDiv.classList.remove("hidden");
-                    } else {
-                        navMenuDiv.classList.add("hidden");
-                    }
-                } else {
-                    // click both outside link and outside menu, hide menu
-                    navMenuDiv.classList.add("hidden");
-                }
-            }
+          //Nav Menu
+          if (!checkParent(target, navMenuDiv)) {
+              // click NOT on the menu
+              if (checkParent(target, navMenu)) {
+                  // click on the link
+                  if (navMenuDiv.classList.contains("hidden")) {
+                      navMenuDiv.classList.remove("hidden");
+                  } else {
+                      navMenuDiv.classList.add("hidden");
+                  }
+              } else {
+                  // click both outside link and outside menu, hide menu
+                  navMenuDiv.classList.add("hidden");
+              }
+          }
 
-        }
+      }
 
-        function checkParent(t, elm) {
-            while (t.parentNode) {
-                if (t == elm) {
-                    return true;
-                }
-                t = t.parentNode;
-            }
-            return false;
-        }
-  </script>
+      function checkParent(t, elm) {
+          while (t.parentNode) {
+              if (t == elm) {
+                  return true;
+              }
+              t = t.parentNode;
+          }
+          return false;
+      }
+</script>
 
 </html>
