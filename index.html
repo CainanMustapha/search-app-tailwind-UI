@@ -41,10 +41,10 @@ nav .menu-resposive{background: #fff}
   }
 
 .mt-44{
-  margin-top: calc(50vh - 24px - 270px) !important
+  margin-top: calc(50vh - 24px - 292px) !important
 }
 .mt-28{
-  margin-top: calc(50vh - 24px - 270px) !important
+  margin-top: calc(50vh - 24px - 292px) !important
 }
 
 /* custom palette */
@@ -65,8 +65,14 @@ nav .menu-resposive{background: #fff}
 .bg-emerald-400{
   background-color: #258F25;
 }
+.text-emerald-400{
+  color: #258F25;
+}
 .bg-emerald-500{
   background-color: #95DB99;
+}
+.text-emerald-500{
+  color: #95DB99;
 }
 .bg-emerald-600{
   background-color:#C2E5D6;
@@ -79,6 +85,12 @@ nav .menu-resposive{background: #fff}
 }
 .bg-aqua-400{
   background-color: #0ca0a0;
+}
+.bg-aqua-400:hover{
+  background-color: #34696F;
+}
+.text-aqua-400{
+  color: #0ca0a0;
 }
 .bg-aqua-500{
   background-color: #74B8BE;
@@ -95,60 +107,80 @@ nav .menu-resposive{background: #fff}
 <body>
   
   <!-- header -->
-
-    <nav id="header" class="w-full">
-
-    <!--Nav-->
-    <div class="relative w-full z-10 fixed top-0 bg-aqua-600 border-b border-grey-light">
-      <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-4">
-        <div class="pl-4 flex items-center">
-          <!-- <img src="./assets/find-health-services-original-upscaled-222px.png" alt="logo" style="clip-path: circle(50% at 50% 50%); max-width: 32px" class="mx-3"/> -->
-          <a class="text-teal-700 text-base no-underline hover:no-underline font-extrabold text-xl" href="#"> <div class="">
-      Find<strong> Health</strong> Services
-    </div></a>
-          <div id="search-toggle" class="search-icon cursor-pointer pl-6">
-            <svg class="fill-current pointer-events-none text-grey-darkest w-4 h-4 inline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-			  <path d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"></path>
-			</svg>
-          </div>
-        </div>
-
-        <div class="pr-4">
-          <button id="nav-toggle" class="block lg:hidden flex items-center px-3 py-2 border rounded text-grey border-grey-dark hover:text-black hover:border-purple appearance-none focus:outline-none">
-            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg>
-          </button>
-        </div>
-
-        <div class="w-full flex-grow lg:flex lg:flex-1 lg:content-center lg:justify-end lg:w-auto hidden lg:block mt-2 lg:mt-0 z-20" id="nav-content">
-
-          <ul class="list-reset lg:flex justify-end items-center">
-            <li class="mr-3 py-2 lg:py-0">
-              <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Home</a>
-            </li>
-            <li class="mr-3 py-2 lg:py-0">
-              <a class="inline-block text-grey-dark no-underline hover:text-black hover:underline py-2 px-4" href="#">Join</a>
-            </li>
-            <li class="mr-3 py-2 lg:py-0">
-              <a class="inline-block text-grey-dark no-underline hover:text-black hover:underline py-2 px-4" href="#">another link</a>
-            </li>
-          </ul>
-
-        </div>
-
+  <navbar class="w-full min-h-screen text-gray-900 bg-gradient-to-br from-transparent to-yellow-100">
+    <nav class="flex justify-between items-center py-8 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-16 xl:px-24">
+      <button
+        class="sidebar-open block md:hidden relative z-30 focus:outline-none transform  -translate-x-1/2 -translate-y-1/2 active:scale-75 transition-transform">
+        <svg xmlns="http://www.w3.org/2000/svg" class="btn-open h-5 w-5 transform transition duration-500 ease-in-out"
+          viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd" />
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg"
+          class="btn-close hidden h-5 w-5 transform transition duration-500 ease-in-out" viewBox="0 0 20 20"
+          fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M3 7a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 13a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+      <a href="#" class="text-2xl md:text-3xl font-bold tracking-wide">
+        Find<span class="text-emerald-500"> Health</span> Services
+      </a>
+      <div
+        class="menu-resposive hidden fixed flex inset-0 transition-all bg-white/70 backdrop-blur-xl z-20 md:static md:bg-transparent md:flex items-center justify-center space-y-8 md:space-y-0 flex-col md:flex-row md:space-x-8 -mt-56 md:mt-0 ">
+        <ul class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 lg:md:-x-8">
+          <li class="text-lg md:text-base lg:text-lg font-medium group text-aqua-400">
+            <a href="#">Search
+            </a>
+            <div
+              class="h-0.5 bg-aqua-400 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+            </div>
+          </li>
+          
+          <li class="text-lg md:text-base lg:text-lg font-medium group">
+            <a href="#">Clinics
+            </a>
+            <div
+              class="h-0.5 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+            </div>
+          </li>
+          <li class="text-lg md:text-base lg:text-lg font-medium group">
+            <a href="#">Join
+            </a>
+            <div
+              class="h-0.5 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+            </div>
+          </li>
+         
+        </ul>
+      </div>
+      <button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-aqua-400 whitespace-nowrap hover:bg-yellow-600 hover:text-white
+      rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-500 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+    </nav>
+    <div class="search-form hidden flex items-center space-x-4 px-6 mx-auto max-w-screen-xl md:px-12 lg:px-16 xl:px-24 
+    transform duration-500 transition-all">
+      <div class="flex bg-gray-200 p-2 w-full space-x-2 rounded-lg items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 opacity-75 ml-4" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+        <input
+          class="w-full bg-gray-50 outline-none border-transparent focus:border-transparent focus:ring-0 rounded-lg text-sm sm:text-base"
+          type="text" placeholder="Find Health Services, E.G. Surgeon, Dentist..." />
       </div>
     </div>
-
-    <!--Search-->
-    <div class="relative w-full hidden bg-white shadow-xl" id="search-content">
-      <div class="container mx-auto py-4 text-black">
-        <input id="searchfield" type="search" placeholder="Search..." autofocus="autofocus" class="w-full text-grey-800 transition focus:outline-none focus:border-transparent p-2 appearance-none leading-normal text-xl lg:text-2xl">
-      </div>
-
-    </div>
-
-  </nav>
-  
-  <!-- end header -->
+  </navbar>
+    
+    <!-- end header -->
   
   <!--  Content -->
  
@@ -183,7 +215,7 @@ nav .menu-resposive{background: #fff}
   
   <!--  Footer -->
   
-  <footer class="bg-aqua-600 flex-row-reverse  border-t mt-44 flex justify-between items-center text-sm gap-x-5 p-3">
+  <footer class="flex-row-reverse  border-t mt-44 flex justify-between items-center text-sm gap-x-5 p-3">
     
     
     <div class="flex flex-row gap-x-5 ">
@@ -236,61 +268,26 @@ theme: {
 
 <!-- menu controllers -->
 <script>   
-  var searchMenuDiv = document.getElementById("search-content");
-      var searchMenu = document.getElementById("search-toggle");
+   const btn = document.querySelector("button.sidebar-open")
+  const menu = document.querySelector(".menu-resposive")
+  const buttonOpen = document.querySelector(".btn-open")
+  const buttonClose = document.querySelector(".btn-close")
 
-      var navMenuDiv = document.getElementById("nav-content");
-      var navMenu = document.getElementById("nav-toggle");
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden")
+    formSearch.classList.toggle("hidden", true)
+    buttonOpen.classList.toggle("hidden"),
+      buttonClose.classList.toggle("hidden")
+  })
 
-      document.onclick = check;
+  const buttonMenu = document.querySelector("button.search-menu")
+  const formSearch = document.querySelector(".search-form")
 
-      function check(e) {
-          var target = (e && e.target) || (event && event.srcElement);
+  buttonMenu.addEventListener("click", () => {
+    formSearch.classList.toggle("hidden")
+  })
 
-          //User Menu
-          if (!checkParent(target, searchMenuDiv)) {
-              // click NOT on the menu
-              if (checkParent(target, searchMenu)) {
-                  // click on the link
-                  if (searchMenuDiv.classList.contains("hidden")) {
-                      searchMenuDiv.classList.remove("hidden");
-                      searchfield.focus();
-                  } else {
-                      searchMenuDiv.classList.add("hidden");
-                  }
-              } else {
-                  // click both outside link and outside menu, hide menu
-                  searchMenuDiv.classList.add("hidden");
-              }
-          }
 
-          //Nav Menu
-          if (!checkParent(target, navMenuDiv)) {
-              // click NOT on the menu
-              if (checkParent(target, navMenu)) {
-                  // click on the link
-                  if (navMenuDiv.classList.contains("hidden")) {
-                      navMenuDiv.classList.remove("hidden");
-                  } else {
-                      navMenuDiv.classList.add("hidden");
-                  }
-              } else {
-                  // click both outside link and outside menu, hide menu
-                  navMenuDiv.classList.add("hidden");
-              }
-          }
-
-      }
-
-      function checkParent(t, elm) {
-          while (t.parentNode) {
-              if (t == elm) {
-                  return true;
-              }
-              t = t.parentNode;
-          }
-          return false;
-      }
 </script>
 
 </html>
