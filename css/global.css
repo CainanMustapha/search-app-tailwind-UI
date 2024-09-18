@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* home tailwind custom specific override */
+.mt-44{
+margin-top: calc(50vh - 24px - 240px);
+}
+.mt-28{
+margin-top: calc(50vh - 24px - 240px);
+}
+
+nav .menu-resposive{background: #fff}
+
+/* global */
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+.mt-44{
+  margin-top: calc(50vh - 24px - 292px) !important
+}
+.mt-28{
+  margin-top: calc(50vh - 24px - 292px) !important
+}
+
+/* custom palette */
+
+.bg-grayson-400{
+  background-color: #5B5B5D;
+}
+.border-grayson-500{
+  border-color: #A3A3A3;
+}
+.bg-grayson-500{
+  background-color: #A3A3A3;
+}
+.bg-grayson-600{
+  background-color: #DCDEDD;
+}
+
+.bg-emerald-400{
+  background-color: #258F25;
+}
+.text-emerald-400{
+  color: #258F25;
+}
+.bg-emerald-500{
+  background-color: #95DB99;
+}
+.text-emerald-500{
+  color: #95DB99;
+}
+.bg-emerald-600{
+  background-color:#C2E5D6;
+}
+.text-emerald-600{
+  color: #C2E5D6;
+}
+
+.bg-aqua-200{
+  background-color: #34696F;
+}
+.bg-aqua-300{
+  background-color: #147c7c;
+}
+.bg-aqua-400{
+  background-color: #0ca0a0;
+}
+.bg-aqua-400:hover{
+  background-color: #34696F;
+}
+.text-aqua-400{
+  color: #0ca0a0;
+}
+.bg-aqua-500{
+  background-color: #74B8BE;
+}
+.bg-aqua-600{
+  background-color:#E4F1F2;
+}
+
+
+/* - */
+
+nav .menu-resposive{background: #fff}
