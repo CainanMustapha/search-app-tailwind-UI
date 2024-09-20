@@ -7,7 +7,7 @@
 
   <style>
     @import url('https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css');
-    @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');
+    /*@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css');*/
     @import url('https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css');
     @import url('./css/global.css');
   </style>
@@ -39,29 +39,27 @@
       <div
         class="menu-resposive hidden fixed flex inset-0 transition-all bg-white/70 backdrop-blur-xl z-20 md:static md:bg-transparent md:flex items-center justify-center space-y-8 md:space-y-0 flex-col md:flex-row md:space-x-8 -mt-56 md:mt-0 ">
         <ul class="flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-6 lg:md:-x-8">
-          <li class="text-lg md:text-base lg:text-lg font-medium group text-aqua-400">
+          <li class="text-lg md:text-base lg:text-lg font-medium group">
             <a href="./index.html">Search
+            </a>
+            <div
+            class="h-0.5 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+          </div>
+          </li>   
+          <li class="text-lg md:text-base lg:text-lg font-medium group">
+            <a href="./search_results.html">Results
+            </a>
+            <div
+            class="h-0.5 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
+          </div>
+          </li>
+          <li class="text-lg md:text-base lg:text-lg font-medium group text-aqua-400">
+            <a href="./join.html">Join
             </a>
             <div
               class="h-0.5 bg-aqua-400 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
             </div>
           </li>
-          
-          <li class="text-lg md:text-base lg:text-lg font-medium group">
-            <a href="./search_results.html">Results
-            </a>
-            <div
-              class="h-0.5 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
-            </div>
-          </li>
-          <li class="text-lg md:text-base lg:text-lg font-medium group">
-            <a href="./join.html">Join
-            </a>
-            <div
-              class="h-0.5 scale-x-0 group-hover:scale-100 transition-transform origin-left rounded-full duration-300 ease-out">
-            </div>
-          </li>
-         
         </ul>
       </div>
       <button class="search-menu flex justify-center items-center h-12 px-5 font-medium text-gray-100 bg-aqua-400 whitespace-nowrap hover:bg-yellow-600 hover:text-white
