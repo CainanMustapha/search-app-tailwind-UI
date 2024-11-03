@@ -72,13 +72,13 @@ body {
   color:  #147c7c;
 }
 .bg-aqua-400{
-  background-color: #0ca0a0;
+  background-color: #0CA0A0;
 }
 .bg-aqua-400:hover{
-  background-color: #34696F;
+    background-color: #34696F;
 }
 .text-aqua-400{
-  color: #0ca0a0;
+  color: #0CA0A0;
 }
 .bg-aqua-500{
   background-color: #74B8BE;
